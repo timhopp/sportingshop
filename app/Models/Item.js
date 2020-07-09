@@ -6,6 +6,7 @@ export default class Item {
     this.description = data.description
     this.img = data.img 
     this.stock = data.stock 
+    this.cart = data.cart
   }
 
   get Template(){
@@ -20,6 +21,20 @@ export default class Item {
     </div>
   `
   
+  }
+
+  get cartTemplate(){
+    return `
+    <div class="col-9 card bg-secondary text-light p-3 m-4">
+    <h2>${this.title}</h2>
+    <img class="img-fluid src="${this.img}">
+    <h3>${this.cart}</h3
+    <button class="btn btn-danger" onclick="app.itemsController.deleteItem(
+      '${this.id}')">Delete</button>
+
+</div>
+    
+    `
   }
 
 }

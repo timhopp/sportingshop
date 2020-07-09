@@ -11,7 +11,10 @@
   </head>
   <body>
       <nav class="navbar sticky-top navbar-info justify-content-between">
-          
+          <p>Increase Currency</p>
+          <button class="btn btn-success" onclick="app.itemsController.addFunds()"></button>
+          <div> $$ </div>
+          <button type="button" class="btn btn-info" data-toggle ="modal" data-target="#cart" onclick="app.itemsController.viewCart()">View Cart</button>
       </nav>
       <div class="container-fluid">
       <div class="row">
@@ -22,7 +25,7 @@
     <div class="row" id="items">
         </div>
 
-    <div class="containt-fliud">
+    <div class="containter-fliud">
         <div class="modal modalSize row mx-2" id="cart" role="dialog">
             <div class="col-12 modal-content">
                 <div class="modal-header border-bottom-0">

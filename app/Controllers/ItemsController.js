@@ -9,6 +9,17 @@ function _draw() {
   document.getElementById("items").innerHTML = template
 }
 
+function _drawCart(){
+  let template = ''
+  let items = {};
+  for(let i = 0; i < _store.State.items.length; i++){
+    if(_store.State.items.cart >= 1){
+     items.push(_store.State.items[i])
+    }
+  }
+  items.forEach(item => template += item.cartTemplate )
+  document.getElementById('items').innerHTML = template
+}
 
 export default class ItemsController {
   constructor(){
