@@ -1,4 +1,5 @@
-import ItemsService from "../Services/ItemsService.js"
+import _itemsService from "../Services/ItemsService.js"
+import _store from "../store.js"
 
 
 function _draw() {
@@ -20,8 +21,16 @@ export default class ItemsController {
     event.preventDefault();
     let formData = event.target
 
-    // raw item data inputs //
+    let rawItemData = {
+      title: formData.title.value,
+      description: formData.description.value,
+      img: formData.img.value,
+      stock: formData.stock.value
+    }
 
-    _itemsService.addItem(raw)
+    _itemsService.addItem(rawItemData)
+    formData.reset()
+    _draw()
   }
+
 }
