@@ -10,16 +10,37 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
   <body>
-    <h1>Sportings Goods</h1> 
-    <div class="row" id="items">
-    <div class="col-3 card bg-secondary text-light p-3 m-4">
-        <h2>Title</h2>
-        <h3>Description</h3>
-        <h3>Img</h3>
-        <button class="btn btn-danger">Delete</button>
-
-    </div>
+      <nav class="navbar sticky-top navbar-info justify-content-between">
+          
+      </nav>
+      <div class="container-fluid">
+      <div class="row">
+          <h1 class="text-center">Sportings Goods</h1> 
         </div>
+    </div>
+    
+    <div class="row" id="items">
+        </div>
+
+    <div class="containt-fliud">
+        <div class="modal modalSize row mx-2" id="cart" role="dialog">
+            <div class="col-12 modal-content">
+                <div class="modal-header border-bottom-0">
+                    <h5 class="modal-title" id="exampleModal">
+                        Your Shopping Cart
+                    </h5>
+
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span></span>
+                    </button>
+                </div>
+                <div class="modal-body" id="modal-body">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
 
       
     <!-- Optional JavaScript -->

@@ -12,8 +12,8 @@ export default class Item {
     return `
   <div class="col-3 card bg-secondary text-light p-3 m-4">
         <h2>${this.title}</h2>
-        <h3>${this.description}</h3>
         <img class="img-fluid src="${this.img}">
+        <h3>${this.description}</h3>
         <button class="btn btn-danger" onclick="app.itemsController.deleteItem(
           '${this.id}')">Delete</button>
 
