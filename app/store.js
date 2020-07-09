@@ -1,5 +1,5 @@
 import Value from "./Models/Value.js";
-import Item from "./Model/Item.js";
+import Item from "./Models/Item.js";
 
 let _state = {
   activeValue: new Value({ title: "Value" }),
