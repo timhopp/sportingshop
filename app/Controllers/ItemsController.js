@@ -5,7 +5,7 @@ import _store from "../store.js"
 function _draw() {
   let template = ""
   let items = _store.State.items
-  items.forEach(item => template += item.template)
+  items.forEach(item => template += item.Template)
   document.getElementById("items").innerHTML = template
 }
 

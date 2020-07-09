@@ -1,16 +1,19 @@
-import Value from "./Models/Value.js";
 import Item from "./Models/Item.js";
 
 let _state = {
-  activeValue: new Value({ title: "Value" }),
-  /** @type {Value[]} */
-  values: []
+  activeValue: new Item({ title: "Item" }),
+  /** @type {Item[]} */
+  items: []
 };
 
 class Store {
   /**
    * Provides access to application state data
    */
+
+   addItem(newItem) {
+     _state.items.push(newItem)
+   }
   get State() {
     return _state;
   }
