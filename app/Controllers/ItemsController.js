@@ -11,14 +11,14 @@ function _draw() {
 
 function _drawCart(){
   let template = ''
-  let items = {};
+  let cart = [];
   for(let i = 0; i < _store.State.items.length; i++){
-    if(_store.State.items.cart >= 1){
-     items.push(_store.State.items[i])
+    if(_store.State.items[i].cart >= 1){
+     cart.push(_store.State.items[i])
     }
   }
-  items.forEach(item => template += item.cartTemplate )
-  document.getElementById('items').innerHTML = template
+  cart.forEach(item => template += item.cartTemplate )
+  document.getElementById('cart').innerHTML = template
 }
 
 export default class ItemsController {
@@ -27,21 +27,33 @@ export default class ItemsController {
     _draw()
   }
 
+  addCart(itemId){
+    _store.addCart(itemId)
+  }
 
-  addItem(event) {
-    event.preventDefault();
-    let formData = event.target
 
-    let rawItemData = {
-      title: formData.title.value,
-      description: formData.description.value,
-      img: formData.img.value,
-      stock: formData.stock.value
-    }
+  // addItem(event) {
+  //   event.preventDefault();
+  //   let formData = event.target
 
-    _itemsService.addItem(rawItemData)
-    formData.reset()
-    _draw()
+  //   let rawItemData = {
+  //     title: formData.title.value,
+  //     description: formData.description.value,
+  //     img: formData.img.value,
+  //     stock: formData.stock.value
+  //   }
+
+  //   _itemsService.addItem(rawItemData)
+  //   formData.reset()
+  //   _draw()
+  // }
+
+  viewCart(){
+    _drawCart()
+  }
+
+  deleteItem(itemId){
+    _itemsService.deleteItem(itemId)
   }
 
 }

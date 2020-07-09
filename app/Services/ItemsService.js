@@ -3,6 +3,9 @@ import Item from "../Models/Item.js"
 
 
 class ItemsService {
+  deleteItem(itemId) {
+    _store.deleteItem(itemId)
+  }
   constructor(){
     console.log('Hi Item Service')
   }
@@ -11,6 +14,8 @@ class ItemsService {
   let newItem = new Item(rawItemData)
   _store.addItem(newItem)
   }
+
+  
 }
 
 const SERVICE = new ItemsService();

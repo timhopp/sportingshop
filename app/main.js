@@ -1,9 +1,9 @@
-import ValuesController from "./Controllers/ValuesController.js";
 import ItemsController from "./Controllers/ItemsController.js"
+import FundsController from "./Controllers/fundsController.js"
 
 class App {
-  valuesController = new ValuesController();
 
+  fundsController = new FundsController();
   itemsController = new ItemsController();
 }
 
